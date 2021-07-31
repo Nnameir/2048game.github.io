@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(160, 30, 90);
+}
+
+div {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+#main {
+  height: 450px;
+  width: 1000px;
+  margin: 80px auto;
+}
+/* 左侧界面 */
+#main-left {
+  width: 450px;
+  height: 450px;
+  text-align: center;
+}
+
+#score-board {
+  width: 300px;
+  margin: 60px auto;
+  font-size: 20px;
+}
+
+#score-board > div {
+  width: 130px;
+  height: 100px;
+  padding: 20px;
+  background-color: #bbada0;
+  color: #e9e3da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#score,
+#best {
+  margin-top: 3px;
+  font-size: 30px;
+  color: #fff;
+}
+
+#new-game {
+  width: 200px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #8f7a66;
+  font-size: 25px;
+  color: #fff;
+  line-height: 80px;
+  border-radius: 5px;
+}
+
+#new-game:hover {
+  cursor: pointer;
+}
+/* 右侧游戏窗口 */
+#game-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  width: 450px;
+  height: 450px;
+  background-color: #bbada0;
+  border-radius: 5px;
+}
+
+.game-item {
+  width: 95px;
+  height: 95px;
+  background-color: #cdc0b4;
+  line-height: 95px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.game-item-move {
+  position: absolute;
+}
+/* 卡片样式 */
+.black {
+  color: #776e65;
+}
+
+.white {
+  color: #f9f6f2;
+}
+
+.card-fontSize-3 {
+  font-size: 35px;
+}
+
+.card-fontSize-4 {
+  font-size: 30px;
+}
+
+.card-fontSize-5 {
+  font-size: 27px;
+}
+
+.card-fontSize-6 {
+  font-size: 24px;
+}
+
+.card-pow-1 {
+  background-color: #eee4da;
+}
+
+.card-pow-2 {
+  background-color: #ede0c8;
+}
+
+.card-pow-3 {
+  background-color: #f2b179;
+}
+
+.card-pow-4 {
+  background-color: #f59563;
+}
+
+.card-pow-5 {
+  background-color: #f67c5f;
+}
+
+.card-pow-6 {
+  background-color: #f65e3b;
+}
+
+.card-pow-7 {
+  background-color: #edcf72;
+}
+
+.card-pow-8 {
+  background-color: #edcc61;
+}
+
+.card-pow-9 {
+  background-color: #edc850;
+}
+
+.card-pow-10 {
+  background-color: #edc53f;
+}
+
+.card-pow-11 {
+  background-color: #edc330;
+}
+
+.card-pow-12 {
+  background-color: #ef6669;
+}
+
+.card-pow-13 {
+  background-color: #ec4d57;
+}
+
+.card-pow-14 {
+  background-color: #f24143;
+}
+
+.card-pow-15 {
+  background-color: #70b3d3;
+}
+
+.card-pow-16 {
+  background-color: #5c9fe2;
+}
+
+.card-pow-17 {
+  background-color: #1882cf;
+}
+/* 遮罩层 */
+#mask {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  opacity: 0.4;
+}
+
+#mask div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  color: #000;
+  transform: translate(-50%, -50%);
+}
